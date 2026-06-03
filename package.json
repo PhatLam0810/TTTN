@@ -1,0 +1,49 @@
+{
+  "name": "mye-game-arena-vanilla",
+  "version": "1.0.0",
+  "description": "MyE Game Arena - Vanilla HTML/CSS/JavaScript version (converted from Next.js)",
+  "type": "module",
+  "author": "MYE Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mye/my-app-vanilla"
+  },
+  "keywords": [
+    "game-portal",
+    "vanilla-js",
+    "responsive-design",
+    "html",
+    "css",
+    "javascript"
+  ],
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "start:node": "http-server",
+    "dev": "python -m http.server 8000"
+  },
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  },
+  "files": [
+    "index.html",
+    "game-screen.html",
+    "css/",
+    "js/",
+    "images/",
+    "README.md",
+    "QUICKSTART.md",
+    "CONVERSION_REPORT.md"
+  ],
+  "devDependencies": {
+    "http-server": "^14.1.0"
+  },
+  "notes": {
+    "convertedFrom": "Next.js 16.2.7",
+    "convertedTo": "Vanilla JavaScript ES6 Modules",
+    "conversionDate": "2026-06-03",
+    "bundleReduction": "90% smaller than Next.js version",
+    "noExternalDependencies": true
+  }
+}

@@ -1,0 +1,75 @@
+/* Header Styles */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: var(--color-background);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.header-container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.header-logo {
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.nav-link {
+  color: var(--color-primary);
+  transition: color 0.2s ease;
+  font-weight: 600;
+  padding-bottom: 4px;
+}
+
+.nav-link:hover {
+  color: var(--color-active);
+}
+
+.nav-link.active {
+  color: var(--color-active);
+  border-bottom: 3px solid var(--color-active);
+}
+
+.header-login {
+  border-radius: 999px;
+  background: var(--color-active);
+  border-color: var(--color-active);
+  color: #ffffff;
+  padding: 12px 32px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: background 0.2s ease;
+}
+
+.header-login:hover {
+  background: #ff7f1f;
+}
+
+/* Responsive */
+@media (max-width: 860px) {
+  .header-nav {
+    display: none;
+  }
+
+  .header-container {
+    justify-content: space-between;
+  }
+}
