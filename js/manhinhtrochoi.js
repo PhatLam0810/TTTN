@@ -77,13 +77,17 @@ export function createGameCard(game) {
   cardContainer.className = "game-card-container";
 
   const hasBadge = game.badge === "HOT";
+  const hasNewBadge = game.badge === "NEW";
   const badgeHTML = hasBadge
     ? `<img src="${GAME_HOT_BADGE}" alt="${game.title}" class="game-card-badge">`
-    : `<img src="${GAME_NEW_BADGE}" alt="${game.title}" class="game-card-badge">`;
-
+    : "";
+  const badgeNewHTML = hasNewBadge
+    ? `<img src="${GAME_NEW_BADGE}" alt="${game.title}" class="game-card-badge">`
+    : "";
   cardContainer.innerHTML = `
     <div class="game-card">
       ${badgeHTML}
+      ${badgeNewHTML}
       <div class="game-card-header" style="padding: 16px;">
         <h3 class="game-card-title">${game.title}</h3>
         <p class="game-card-category">${game.category}</p>
@@ -132,11 +136,13 @@ export function createGameCardPopular(game) {
         <img src="${game.image}" alt="${game.title}" class="game-card-popular-image">
         <div class="game-card-popular-overlay"></div>
         <div class="game-card-popular-badge">
-          <img src="${GAME_HOT_BADGE}" alt="HOT" style="width:100%; height:100%; object-fit:cover;">
+          <img src="${game.image}" alt="HOT" class="game-card-popular-badge-image">
         </div>
         <div class="game-card-popular-content">
-          <h3 class="game-card-popular-title">${game.title}</h3>
-          <p class="game-card-popular-category">${game.category}</p>
+        <div>
+        <h3 class="game-card-popular-title">${game.title}</h3>
+        <p class="game-card-popular-category">${game.category}</p>
+        </div>
           <div class="game-card-popular-footer">
             <button class="game-card-popular-btn" title="Trang Chủ">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">

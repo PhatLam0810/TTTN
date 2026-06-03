@@ -6,7 +6,7 @@ import {
   createFilterBar,
   createCardGrid,
   createSpotlightGrid,
-} from "./components.js";
+} from "./manhinhtrochoi.js";
 
 import { GAME_LIST, NEW_RELEASES, SPOTLIGHT_GAMES } from "./data.js";
 
